@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+
+body 
+{
+  background: no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+*
+{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+
+/*------------- NAV BAR -------------*/
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: 'quicksand', sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.appear{
+  padding: 15px;
+  background: rgba(146, 146, 146, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px rgba(2,2,2,0.7);
+}
+
+.navbar .logo{
+  font-weight: 700;    
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  transition: 0.5s;
+  
+}
+.navbar .logo:hover{
+  transform: scale(1.2);
+  
+  background: linear-gradient(45deg, red, orange);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;    
+}
+
+.navbar ul{
+  list-style: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 10%;
+}
+.navbar ul li{
+  display: inline-block;
+}
+.navbar ul li a{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: rgb(161, 161, 161);
+  display: block;
+  margin: 0 10px;
+  position: relative; 
+}
+.navbar ul li a:after{
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, red, orange);
+  height: 2px;
+  width: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.3s ease;
+}
+.navbar ul li a:hover,
+.navbar ul li a.active{
+  color: white;
+}
+.navbar ul li a:hover:after,
+.navbar ul li a.active:after{
+  width: 50%;
+}
+
+
+
+
+.home-content 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 14px;
+}
+
+
+.about-content 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.still-text-home
+{
+  margin-top: 20px;
+  font-size: clamp(40px, 8vw, 95px);
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.still-text-about
+{
+  margin-top: 20px;
+  font-size: 40px;
+  color: white;
+  padding: 10% 10%;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.moving-text
+{
+  margin-top: 20px;
+  font-size: clamp(15px, 5vw, 50px);
+  font-weight: 500;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.footer
+{
+  background: black;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer .footer-content
+{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  font-size: 17px;
+  
+}
+.footer .copyright
+{
+  display: flex;
+  justify-content: center;
+  order: 1;
+  font-weight: 500;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  
+}
+.footer .socials
+{
+  display: flex;
+  justify-content: center;
+  order: 2;
+}
+.footer .social-links
+{
+  display: block;
+  list-style: none;
+  font-size: 0;
+}
+.footer .social-links .social-link
+{
+  display: inline-block;
+  margin: 0 15px;    
+  padding: 0 2px;
+  font-size: 20px; 
+  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease; 
+  
+}
+.footer .social-links .social-link:hover
+{
+  transform: scale(1.2) translateY(-5px);
+  background: linear-gradient(45deg, red, orange);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  
+}
+.footer .social-links .social-link a
+{
+  color: white;    
+}
+
+@media (max-width: 600px) 
+{
+  .still-text-about 
+  {
+    font-size: 16px;
+    width: 80%;
+  }
+}
